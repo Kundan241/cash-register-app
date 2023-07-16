@@ -3,14 +3,29 @@ let cashGiven=document.querySelector("#cashGiven")
 let buttonCheck=document.querySelector("#btn-check")
 let NumOfNotes=document.querySelectorAll(".NumOfNotes")
 let errorMessage=document.querySelector("#errorMessage")
+let btnNext=document.querySelector("#btn-next")
+let labelCashGiven=document.querySelector("#label-cashGiven");
 let availableNotes=[2000,500,100,20,10,5,1]
 
-
+btnNext.addEventListener("click",function(){
+  console.log(billAmount.value)
+  if(billAmount.value>0)
+  {
+    labelCashGiven.classList.remove("hidden-element");
+    cashGiven.classList.remove("hidden-element");
+  }
+  else{
+    throwError("Bill cannot be negative");
+  }
+})
 function throwError(msg)
 {
-    errorMessage.style.display="hide";
+    
     errorMessage.style.display="block";
     errorMessage.innerText=msg;
+    setTimeout(() => {
+      errorMessage.style.display="hide";
+    }, 100);
 }
 
 function clickHandler()
