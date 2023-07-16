@@ -43,15 +43,20 @@ main label{
     font-weight: bold;
 }
 
-main button{
+button{
     color: var(--secondary-color);
     cursor: pointer;
     max-width: 19rem;
     border-radius: 1rem;
     border: 1px solid var(--primary-color) ;
     padding: 0.6rem 1rem;
-    margin: auto;
+    margin: 0.5rem auto   ;
+    
 }
+.hidden-element{
+    display:none;
+}
+
 main table{
    
     

@@ -19,14 +19,15 @@
         </p>
         <label for="billAmount"> Bill Amount:</label>
         <input type="number" name="bill" id="billAmount">
-        <label for="cashGiven">Cash Given:</label>
-        <input type="number" name="cash" id="cashGiven">
-        <button id="btn-check"> Check</button>
+        <button id="btn-next"> Next </button>
+        <label for="cashGiven" class="hidden-element" id="label-cashGiven">Cash Given:</label>
+        <input type="number" name="cash" class="hidden-element" id="cashGiven">
+        <button id="btn-check" class="hidden-element"> Check</button>
 
         <p id="errorMessage">
             
         </p>
-        <table>
+        <table class="hidden-element">
             <caption>Return Change</caption>
             <tr>
                 <th>No. of Notes</th>
