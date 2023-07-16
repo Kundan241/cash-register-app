@@ -1,0 +1,16 @@
+*{
+    background-color: beige;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+}
+
+button{
+    cursor: pointer;
+    max-width: 9rem;
+    border-radius: 1rem;
+    border: 1px solid black ;
+}
