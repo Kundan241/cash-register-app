@@ -9,6 +9,8 @@ let availableNotes=[2000,500,100,20,10,5,1]
 function throwError(msg)
 {
     errorMessage.style.display="hide";
+    errorMessage.style.display="block";
+    errorMessage.innerText=msg;
 }
 
 function clickHandler()
@@ -18,8 +20,13 @@ function clickHandler()
     {
         throwError("Bill cannot be negative");
     }
+    else{
+      if(cashGiven.value<billAmount.value){
+        throwError("Do you want to wash the plate");
+      }
+      else{
 
-    let amountReturn=cashGiven.value -billAmount.value
+        let amountReturn=cashGiven.value -billAmount.value
 
   for(let i=0;i<availableNotes.length;i++)
   {
@@ -28,6 +35,12 @@ function clickHandler()
     NumOfNotes[i].innerText=numberOfNotes;
     amountReturn=amountReturn%availableNotes[i];
   }
+
+      }
+
+    }
+
+    
 }
 
 
