@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Sorter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Cash Sorter App
+        </h1>
+       
+    </header>
+    <main>
+        <p>
+            Enter the bill amount and cash given by the customer and know minimum number of notes to return.
+        </p>
+        <label for="billAmount"> Bill Amount:</label>
+        <input type="text" name="bill" id="billAmount">
+        <label for="cashGiven">Cash Given:</label>
+        <input type="text" name="cash" id="cashGiven">
+        <button id="btn-check"> Check</button>
+
+        <p id="errorMessage">
+            
+        </p>
+        <table>
+            <caption>Return Change</caption>
+            <tr>
+                <th>No. of Notes</th>
+                <td class="NumOfNotes"></td>
+                <td class="NumOfNotes"></td>
+                <td class="NumOfNotes"></td>
+                <td class="NumOfNotes"></td>
+                <td class="NumOfNotes"></td>
+                <td class="NumOfNotes"></td>
+                <td class="NumOfNotes"></td>
+            </tr>
+            <tr>
+                <th>Note</th>
+                <td>2000</td>
+                <td>500</td>
+                <td>100</td>
+                <td>20</td>
+                <td>10</td>
+                <td>5</td>
+                <td>1</td>
+            </tr>
+        </table>
+
+    </main>
+    <footer>
+
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html> 
