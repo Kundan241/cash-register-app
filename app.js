@@ -6,6 +6,11 @@ let errorMessage=document.querySelector("#errorMessage")
 let btnNext=document.querySelector("#btn-next")
 let labelCashGiven=document.querySelector("#label-cashGiven");
 let availableNotes=[2000,500,100,20,10,5,1]
+let tableContent=document.querySelector("#tableContent")
+
+
+
+
 
 btnNext.addEventListener("click",function(){
   console.log(billAmount.value)
@@ -13,18 +18,22 @@ btnNext.addEventListener("click",function(){
   {
     labelCashGiven.classList.remove("hidden-element");
     cashGiven.classList.remove("hidden-element");
+    buttonCheck.classList.remove("hidden-element");
   }
   else{
     throwError("Bill cannot be negative");
   }
 })
+
+
+
 function throwError(msg)
 {
     
     errorMessage.style.display="block";
     errorMessage.innerText=msg;
     setTimeout(() => {
-      errorMessage.style.display="hide";
+      errorMessage.style.display="none";
     }, 100);
 }
 
@@ -40,6 +49,7 @@ function clickHandler()
         throwError("Do you want to wash the plate");
       }
       else{
+      
 
         let amountReturn=cashGiven.value -billAmount.value
 
@@ -50,7 +60,9 @@ function clickHandler()
     NumOfNotes[i].innerText=numberOfNotes;
     amountReturn=amountReturn%availableNotes[i];
   }
+  tableContent.classList.remove("hidden-element")
 
+  
       }
 
     }
