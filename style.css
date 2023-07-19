@@ -1,9 +1,9 @@
-:root{
-    --primary-color:rgb(243, 124, 124);
-    --background-color:  rgb(56, 56, 28);
-    --secondary-color:white;
-    --accent-color: #1E90FF;
-}
+:root {
+    --primary-color: #009688; /* Teal */
+    --background-color: #f7f7f7; /* Light gray */
+    --secondary-color: #333333; /* Dark gray */
+    --accent-color: #4caf50; /* Green */
+  }
 
 *{
     margin: 0;
@@ -11,6 +11,9 @@
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
 }
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto Slab", serif;
+  }
 body{
     background-color: var(--background-color);
     color: var(--secondary-color);
@@ -42,7 +45,8 @@ main input{
     border-radius: 0.5rem;
     padding: 0.6rem 1rem;
     margin: 1rem auto;
-    color: var(--secondary-color);
+    color: var(--primary-color);
+    
     font-size: 1rems;
     
     
@@ -90,7 +94,16 @@ table caption{
     font-weight: bold;
 }
 table td, tr{
-    padding: 0.4rem;
+    padding: 0.4rem 0.2rem;
     text-align: center;
     border: 2px solid var(--primary-color);
+}
+@media screen and (max-width:600px) {
+    main{
+        width: 80vw;
+    }
+    main table{
+        font-size: 0.8rem;
+    }
+    
 }
