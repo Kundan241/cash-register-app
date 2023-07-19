@@ -34,7 +34,7 @@ function throwError(msg)
     errorMessage.innerText=msg;
     setTimeout(() => {
       errorMessage.style.display="none";
-    }, 100);
+    }, 1000);
 }
 
 function clickHandler()
