@@ -2,26 +2,35 @@
     --primary-color:rgb(243, 124, 124);
     --background-color:  rgb(56, 56, 28);
     --secondary-color:white;
+    --accent-color: #1E90FF;
 }
 
 *{
-    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
+}
+body{
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    line-height: 1.6;
 }
 
 h1{
     text-align: center;
     font-family: inherit;
     color: var(--primary-color);
+    margin-top: 2rem;
 }
 main{
     color: var(--secondary-color);
     display: flex;
     flex-direction: column;
-    margin: auto;
+    align-items: center;
+    margin: 2rem auto;
     width: 60vw;
-    font-size: large;
+    font-size: 1.1rem;
 }
 main p{
     text-align: center;
@@ -34,6 +43,7 @@ main input{
     padding: 0.6rem 1rem;
     margin: 1rem auto;
     color: var(--secondary-color);
+    font-size: 1rems;
     
     
   
@@ -46,12 +56,17 @@ main label{
 button{
     color: var(--secondary-color);
     cursor: pointer;
-    max-width: 19rem;
+    max-width: 80%;
     border-radius: 1rem;
-    border: 1px solid var(--primary-color) ;
+    border: none ;
     padding: 0.6rem 1rem;
     margin: 0.5rem auto   ;
-    
+    background-color: var(--primary-color);
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+button:hover{
+    background-color: var(--accent-color);
 }
 .hidden-element{
     display:none;
@@ -63,17 +78,19 @@ main table{
     display: table;
     border-collapse: collapse;
     text-align: justify;
-    border: 1px solid var(--primary-color);
-    font-size:75%;
+    border: 2px solid var(--primary-color);
+    font-size: 1rem;
     height: 10vh;
-    width: 50vw;
-    margin: auto;
+    width: 80%;
+    margin: 2rem auto;
 }
 table caption{
     margin: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 table td, tr{
     padding: 0.4rem;
-    border-collapse: collapse;
-    border: 1px solid var(--primary-color);
+    text-align: center;
+    border: 2px solid var(--primary-color);
 }
